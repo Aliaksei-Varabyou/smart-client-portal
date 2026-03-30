@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from '@/components/layout/header';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +30,7 @@ export default function RootLayout({
     >
       <body>
         <div className="min-h-screen bg-gray-50">
-          <header className="p-4 bg-white border-b">
-            <div className="max-w-5xl mx-auto">
-              <h1 className="font-bold">Smart Portal</h1>
-            </div>
-          </header>
+          <Header />          
           <main className="max-w-5xl mx-auto p-4">
             {children}
           </main>
